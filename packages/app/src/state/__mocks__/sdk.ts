@@ -1,0 +1,79 @@
+import { wei } from '@synthetixio/wei'
+
+import { mockTxResponse } from '../../../testing/unit/mocks/data/app'
+import { MOCK_TRADE_PREVIEW, SDK_MARKETS } from '../../../testing/unit/mocks/data/futures'
+
+export const mockSetProvider = () => Promise.resolve('10')
+export const mockSetSigner = () => Promise.resolve()
+export const mockSubmitCrossMarginOrder = jest.fn(() => ({ test: 'THE TX' }))
+
+export const mockFuturesService = () => ({
+	getSmartMarginAccounts: () => ['0x7bCe4eF9d95129011528E502357C7772'],
+	getPreviousDayPrices: () => [],
+	getSmartMarginTradePreview: () => {
+		return { ...MOCK_TRADE_PREVIEW }
+	},
+	getFuturesPositions: () => [],
+	getTradesForMarkets: () => [],
+	getAllTrades: () => [],
+	getConditionalOrders: () => [],
+	getMarketMarginTransfers: () => [],
+	getDelayedOrders: () => [],
+	getSmartMarginAccountTransfers: () => [],
+	getSmartMarginBalanceInfo: () => ({
+		freeMargin: wei('1000'),
+		keeperEthBal: wei('0.1'),
+		walletEthBal: wei('1'),
+		allowance: wei('1000'),
+		balances: {
+			SUSD: wei('1000'),
+			USDC: wei('1000'),
+			// USDT: wei('1000'),
+			DAI: wei('1000'),
+			// LUSD: wei('1000'),
+		},
+		allowances: {
+			SUSD: wei('1000'),
+			USDC: wei('1000'),
+			// USDT: wei('1000'),
+			DAI: wei('1000'),
+			// LUSD: wei('1000'),
+		},
+	}),
+	getMarkets: () => {
+		return [...SDK_MARKETS]
+	},
+	submitCrossMarginOrder: mockSubmitCrossMarginOrder,
+})
+
+const mockSdk = {
+	context: {},
+	exchange: {},
+	futures: { ...mockFuturesService() },
+	prices: {},
+	synths: {},
+	transactions: {},
+	kwentaToken: {
+		getStakingV2Data: () => ({
+			rewardEscrowBalance: wei(0),
+			stakedNonEscrowedBalance: wei(0),
+			stakedEscrowedBalance: wei(0),
+			claimableBalance: wei(0),
+			totalStakedBalance: wei(0),
+			stakedResetTime: 100,
+			kwentaStakingV2Allowance: wei(0),
+		}),
+	},
+	system: {},
+	perpsV3: {
+		getMarkets: () => [],
+		getPerpsV3AccountIds: () => [100],
+		getAvailableMargin: () => wei(1000),
+		getPendingAsyncOrders: () => [],
+		createAccount: () => mockTxResponse('0x123'),
+	},
+	setProvider: mockSetProvider,
+	setSigner: mockSetSigner,
+}
+
+export default mockSdk

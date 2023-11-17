@@ -1,0 +1,44 @@
+name: "Sentry"
+
+on:
+  push:
+    branches: [ main, dev ]
+
+jobs:
+  sentry_release:
+    name: Sentry
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8
+        run_install: false
+
+    - name: Build code
+      run: pnpm i && cd packages/app && pnpm build
+      env: 
+        NEXT_PUBLIC_WALLETCONNECT_V2_ID: ${{ secrets.NEXT_PUBLIC_WALLETCONNECT_V2_ID }}
+
+    - name: Create Sentry release
+      uses: getsentry/action-release@v1
+      env:
+        SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+        SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+      with:
+        environment: production
+        sourcemaps: 'packages/app/.next'
+        ignore_missing: true

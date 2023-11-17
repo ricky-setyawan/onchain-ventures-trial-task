@@ -1,0 +1,109 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'AkkuratLLWeb-Regular';
+	src: url('/fonts/AkkuratLLWeb-Regular.woff2') format('woff2'),
+		url('/fonts/AkkuratLLWeb-Regular.woff') format('woff');
+	font-display: sans-serif;
+}
+
+@font-face {
+	font-family: 'AkkuratLLWeb-Black';
+	src: url('/fonts/AkkuratLLWeb-Black.woff2') format('woff2'),
+		url('/fonts/AkkuratLLWeb-Black.woff') format('woff');
+	font-display: sans-serif;
+}
+
+@font-face {
+	font-family: 'AkkuratLLWeb-Bold';
+	src: url('/fonts/AkkuratLLWeb-Bold.woff2') format('woff2'),
+		url('/fonts/AkkuratLLWeb-Bold.woff') format('woff');
+	font-display: sans-serif;
+}
+
+@font-face {
+	font-family: 'AkkuratMonoLLWeb-Regular';
+	src: url('/fonts/AkkuratMonoLLWeb-Regular.woff2') format('woff2'),
+		url('/fonts/AkkuratMonoLLWeb-Regular.woff') format('woff');
+	font-display: monospace;
+}
+
+@font-face {
+	font-family: 'AkkuratMonoLLWeb-Bold';
+	src: url('/fonts/AkkuratMonoLLWeb-Bold.woff2') format('woff2'),
+		url('/fonts/AkkuratMonoLLWeb-Bold.woff') format('woff');
+	font-display: monospace;
+}
+
+@font-face {
+	font-family: 'GT-America-Compressed-Black';
+	src: url('/fonts/GT-America-Compressed-Black.woff2') format('woff2'),
+		url('/fonts/GT-America-Compressed-Black.woff') format('woff');
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'GT-America-Compressed-Medium';
+	src: url('/fonts/GT-America-Compressed-Medium.woff2') format('woff2'),
+		url('/fonts/GT-America-Compressed-Medium.woff') format('woff');
+	font-display: auto;
+}
+
+#__next {
+	width: 100%;
+	height: 100%;
+}
+
+#__next > div {
+	height: 100%;
+}
+
+* {
+	scroll-behavior: smooth;
+  }
+
+html {
+	scrollbar-width: none;
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	font-family: 'AkkuratLLWeb-Regular', -apple-system, BlinkMacSystemFont, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeSpeed;
+	margin: 0;
+	position: relative;
+	font-size: 12px;
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow: hidden;
+}
+
+::-webkit-scrollbar {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}

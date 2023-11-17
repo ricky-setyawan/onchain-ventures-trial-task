@@ -1,0 +1,1649 @@
+{
+	"languages": {
+		"en": "English"
+	},
+	"meta": {
+		"description": "Gain exposure to a variety of assets with up to 50x leverage and deep liquidity",
+		"ref-description": "Receive a 15% boost on trading rewards!",
+		"og": {
+			"title": "Kwenta",
+			"ref-title": "You are invited to Kwenta",
+			"site-name": "Kwenta"
+		}
+	},
+	"header": {
+		"nav": {
+			"exchange": "exchange",
+			"dashboard": "dashboard",
+			"markets": "futures",
+			"options": {
+				"title": "options",
+				"portfolio": "portfolio",
+				"trade": "trade",
+				"vaults": "vaults",
+				"rewards": "rewards"
+			},
+			"referrals": "referrals",
+			"isolated-margin": "Legacy Futures",
+			"cross-margin": "Smart Margin",
+			"leaderboard-alltime": "All Time",
+			"competition-round-1": "Round 1",
+			"competition-round-2": "Round 2",
+			"leaderboard": "leaderboard",
+			"earn": "earn",
+			"beta-badge": "Beta",
+			"reward-badge": "Rewards"
+		},
+		"networks-switcher": {
+			"chains": "Switch Networks",
+			"l2": "Switch to Optimism",
+			"l1": "Switch to Layer 1",
+			"optimistic-gateway": "Optimistic L2 Gateway",
+			"optimistic-etherscan": "Optimistic Etherscan",
+			"learn-more": "Learn more",
+			"optimism-mainnet": "Optimism",
+			"optimism-testnet": "OP Goerli"
+		},
+		"balance": {
+			"get-susd": "Deposit Funds",
+			"get-more-susd": "Get more sUSD",
+			"total-margin-label": "Total Margin:",
+			"no-accessible-margin": "You have no accessible margin"
+		}
+	},
+	"homepage": {
+		"page-title": "Kwenta | Derivatives Trading with Deep Liquidity",
+		"nav": {
+			"start-trade": "Start Trading",
+			"trade-now": "Trade now",
+			"wallet": "Connect Wallet",
+			"markets": "Markets",
+			"stats": "Stats",
+			"governance": {
+				"title": "Governance",
+				"overview": "Overview",
+				"kips": "KIPs"
+			},
+			"socials": {
+				"title": "Socials",
+				"discord": "Discord",
+				"twitter": "Twitter"
+			},
+			"blog": "Blog",
+			"learn-more": "Learn more"
+		},
+		"hero": {
+			"title": "TRADE SYNTHETIC PERPETUALS",
+			"copy": "Gain exposure to a variety of assets with up to <0>50x leverage</0> and <0>deep liquidity</0>"
+		},
+		"assets": {
+			"title": "UNIQUE MARKETS",
+			"description": "Backed by Chainlink and Pyth Oracles",
+			"forex": "Forex",
+			"crypto": "Cryptocurrencies",
+			"commodity": "Commodities",
+			"short": "Short positions"
+		},
+		"shortlist": {
+			"title": "Leaderboard",
+			"description": "Follow Top Traders",
+			"stats": {
+				"title": "A growing community",
+				"volume": "Total Volume",
+				"traders": "Total Traders",
+				"trades": "Total Trades",
+				"open-interest": "Open Interest"
+			}
+		},
+		"earning": {
+			"title": "Community Run",
+			"description": "GOVERNED BY THE <0>$KWENTA</0> TOKEN",
+			"copy": "Community members earn and vote with $KWENTA",
+			"vote-and-govern": {
+				"title": "vote & govern",
+				"copy": "Token-managed governance empowers the community to steer Kwenta"
+			},
+			"stake-and-earn": {
+				"title": "stake & earn",
+				"copy": "$KWENTA stakers earn inflationary rewards"
+			},
+			"trade-and-earn": {
+				"title": "trade & earn",
+				"copy": "Trade on Kwenta to begin earning tokens"
+			},
+			"how-to-earn": "How to earn",
+			"stake-kwenta": "Coming Soon",
+			"stats": {
+				"volume": "Total Trading Volume",
+				"trades": "Total Trades"
+			}
+		},
+		"learn": {
+			"title": "Learn More",
+			"coming-soon": "Coming Soon",
+			"description": "Explore The Endless Possibilities Of Kwenta",
+			"how-to-stake": {
+				"title": "Learn how to start earning with Kwenta",
+				"copy": "Earn $KWENTA with trading incentives and staking."
+			},
+			"how-governance": {
+				"title": "How Governance Works",
+				"copy": "Kwenta is governed, built, and maintained by its community. Learn more about how governance works, and how to get involved."
+			},
+			"faq": "FAQ"
+		},
+		"tradenow": {
+			"title": "SYNTHETIC LEVERAGE",
+			"description": "Take Back The Market, Trade Like A Whale",
+			"categories": "Commodities, Forex, Crypto and more."
+		},
+		"features": {
+			"title": "ADVANTAGES",
+			"description": "Experience a true DEX",
+			"blazing-fast": {
+				"title": "Blazing Fast",
+				"copy": "Near-instant trade confirmations using Optimism's Layer 2 scalability"
+			},
+			"low-gas-fees": {
+				"title": "Low Gas Fees",
+				"copy": "Transaction costs on Optimism Layer 2 are one-tenth of Ethereum L1"
+			},
+			"unique-assets": {
+				"title": "Unique Assets",
+				"copy": "Trade a variety of digital and traditional assets with low trading fees"
+			},
+			"open-source": {
+				"title": "Open Source",
+				"copy": " Don't trust, verify"
+			},
+			"mobile": {
+				"title": "Mobile",
+				"copy": "Manage your trades at home or on the go"
+			},
+			"easy-ramping": {
+				"title": "Easy Ramping",
+				"copy": "Deposit or withdraw assets freely"
+			},
+			"partners": {
+				"title": "Partners",
+				"copy": "Collaborating with industry leaders to deliver the best trading experience in DeFi."
+			}
+		},
+		"l2": {
+			"title": "Now on Optimism layer 2",
+			"transaction-cost": "Lower gas fees*",
+			"transaction-speed": "Transactions speed*",
+			"disclaimer": "* These statistics are approximations. User experience will vary.",
+			"cta-buttons": {
+				"learn-more": "Learn more",
+				"switch-l2": "Switch to Optimism",
+				"switch-networks": "Switch Networks"
+			},
+			"markets": {
+				"title": "Live markets",
+				"copy": "Start trading now on Optimism layer 2"
+			}
+		},
+		"footer": {
+			"cta": {
+				"title": "Start trading today",
+				"button": "View Exchange"
+			},
+			"copyright": "© 2023 kwenta, All Rights Reserved.",
+			"about-kwenta": {
+				"title": "About Kwenta",
+				"docs": "Docs",
+				"news": "News",
+				"faq": "FAQ",
+				"dao-roles": "DAO Roles"
+			},
+			"use-kwenta": {
+				"title": "Use KWENTA",
+				"perps": "Perpetual Futures",
+				"spot": "Spot Trading",
+				"legacy": "Legacy Exchange",
+				"referrals": "Referral Program",
+				"perps-v1": "Legacy Perpetuals"
+			},
+			"community": {
+				"title": "Community",
+				"governance": "Governance",
+				"dev-dao": "Dev DAO",
+				"marketing-dao": "Marketing DAO",
+				"kips": "Kwenta State Log"
+			}
+		}
+	},
+	"stats": {
+		"title": "kwenta stats",
+		"volume": {
+			"title": "Volume"
+		},
+		"trades": {
+			"title": "Trades"
+		},
+		"traders": {
+			"title": "Traders"
+		},
+		"open-interest": {
+			"title": "Open Interest"
+		}
+	},
+	"exchange": {
+		"page-title": "Exchange | Kwenta",
+		"page-title-currency-pair": "{{baseCurrencyKey}}/{{quoteCurrencyKey}} - {{rate}} | Kwenta",
+		"common": {
+			"from": "from",
+			"into": "into"
+		},
+		"synth-exchange": "Spot Exchange",
+		"currency-card": {
+			"synth-name": "-",
+			"amount-placeholder": "0.0000",
+			"wallet-balance": "balance:",
+			"currency-selector": {
+				"select-token": "select token"
+			},
+			"max-button": "max",
+			"price-impact": " price impact"
+		},
+		"market-details-card": {
+			"title": "Market Details",
+			"24h-vol": "24H Volume",
+			"24h-high": "24H High",
+			"24h-low": "24H Low",
+			"market-cap": "Market cap",
+			"price-feed": "Price Feed",
+			"opens-in": "Opens in",
+			"closes-in": "Closes in",
+			"timer-tooltip": {
+				"last-update": "Last Update",
+				"minute-ago": "min ago",
+				"minutes-ago": "mins ago",
+				"seconds-ago": "sec ago"
+			},
+			"tooltips": {
+				"market-price": "The current price of the Futures market after adding a skew-based premium or discount to the index price",
+				"index-price": "The exact index price of this market without any adjustment for market skew applied",
+				"24h-change": "Total change in asset value within the past 24 hours",
+				"24h-vol": "Total trade volume within the past 24 hours",
+				"24h-trades": "Total amount of trades on selected pair within the past 24h",
+				"open-interest-s": "Total notional value on all short positions / max open interest",
+				"open-interest-l": "Total notional value on all long positions / max open interest",
+				"funding-rate": "Funding applies to all open positions. A positive rate means longs pay shorts, a negative rate means shorts pay longs. The rate increases when a market is skewed long, and decreases when it is skewed short. Funding accrues on a position every time it is opened, modified, or closed.",
+				"skew": "Skew is the total amount of outstanding long and short contracts expressed as a percentage"
+			},
+			"deprecated-info": "DEBT-PERP is being deprecated soon. Please close your positions at your earliest convenience."
+		},
+		"summary-info": {
+			"gas-price-gwei": "gas price (GWEI)",
+			"max-fee-gwei": "Max Fee (GWEI)",
+			"fee": "Exchange fee",
+			"fee-cost": "fee cost",
+			"dynamic-fee-tooltip": "This transaction will incur an additional dynamic fee due to market volatility.",
+			"button": {
+				"approve": "approve",
+				"approving": "approving",
+				"c-ratio-too-low": "c-ratio is too low",
+				"fee-reclaim-period": "fee reclaim period",
+				"settle-waiting-period": "settlement waiting period",
+				"settle": "settle",
+				"insufficient-balance": "insufficient balance",
+				"insufficient-liquidity": "insufficient liquidity",
+				"enter-amount": "enter amount",
+				"select-synth": "select synth",
+				"select-token": "select token",
+				"submit-order": "swap",
+				"submitting-order": "submitting order...",
+				"submitting-approval": "submitting approval...",
+				"add-more-collateral": "add more collateral"
+			}
+		},
+		"onboard": {
+			"1inch-button": "Visit 1inch"
+		},
+		"connect-wallet-card": {
+			"message": "Connect your wallet to start trading"
+		},
+		"footer-card": {
+			"market-closure": {
+				"button-label": "market closed",
+				"reasons": {
+					"frozen": {
+						"message": "{{currencyKey}} synth has been frozen - reset in progress."
+					},
+					"market-closure": {
+						"message": "{{currencyKey}} market has been closed - reset in progress."
+					},
+					"system-upgrade": {
+						"message": "{{currencyKey}} synth paused. Please check the Synthetix Discord for details."
+					},
+					"circuit-breaker": {
+						"message": "Circuit breaker triggered for {{currencyKey}} - reset in progress."
+					},
+					"emergency": {
+						"message": "Emergency shutdown activated for {{currencyKey}} - reset in progress."
+					},
+					"both-synths-suspended": {
+						"message": "Synths selected are currently paused - reset in progress."
+					}
+				}
+			},
+			"get-l2-gas": {
+				"message": "Not enough L2 ETH for transaction fees. Get some via Optimism Bridge:"
+			},
+			"settle": {
+				"message": "You have <0>{{numEntries}}</0> consecutive trades into <0>{{currencyKey}}</0>. Please trade out of <0>{{currencyKey}}</0> or settle: ",
+				"learn-more": "Learn more"
+			}
+		},
+		"errors": {
+			"fee-reclamation": "There is a waiting period after completing a trade. Please wait approximately {{waitingPeriod}} minutes before attempting to exchange {{currencyKey}}",
+			"settlement-waiting": "Please wait approximately {{waitingPeriod}} minutes before attempting to settle {{currencyKey}}"
+		},
+		"charts": {
+			"single": "single",
+			"double": "double"
+		},
+		"1inch": {
+			"unsupported-network": "Synth Swap is not supported on this network",
+			"wallet-not-connected": "Wallet not connected"
+		}
+	},
+	"dashboard": {
+		"page-title": "Dashboard | Kwenta",
+		"titles": {
+			"trading": "Trading",
+			"community": "Community",
+			"staking": "Stake & Rewards"
+		},
+		"tabs": {
+			"overview": "Overview",
+			"history": "History",
+			"markets": "Markets",
+			"governance": "Governance",
+			"staking": "Staking & Rewards",
+			"earn": "Earn",
+			"migrate": "Migrate to V2",
+			"redeem": "Redeem",
+			"v1-staking": "V1 Staking"
+		},
+		"overview": {
+			"futures-positions-table": {
+				"market": "Market",
+				"side": "Side",
+				"avg-entry": "Avg. Entry/Liq. Price",
+				"last-entry": "Last Entry Price",
+				"leverage": "Leverage",
+				"pnl": "uP&L",
+				"notionalValue": "Size",
+				"no-result": "You have no open positions",
+				"legacy-link": "Missing a position? Check the legacy app",
+				"mobile": {
+					"market": "Market/Side",
+					"price": "Oracle/Entry",
+					"pnl": "Unrealized P&L"
+				}
+			},
+			"synth-balances-table": {
+				"market": "Market",
+				"amount": "Amount",
+				"value-in-usd": "Value in USD",
+				"oracle-price": "Price",
+				"daily-change": "24H Change",
+				"no-result": "You have no tokens"
+			},
+			"futures-markets-table": {
+				"market": "Market",
+				"oracle": "Oracle",
+				"mark-price": "Market Price",
+				"daily-change": "24H Change",
+				"funding-rate": "1H Funding Rate",
+				"open-interest": "Open Interest",
+				"daily-volume": "24H Volume",
+				"daily-trades": "24H Trades"
+			},
+			"spot-markets-table": {
+				"market": "Market",
+				"price": "Price",
+				"24h-vol": "24H Volume",
+				"24h-change": "24H Change",
+				"open-interest": "Open Interest",
+				"total-trades": "Total Trades"
+			},
+			"positions-tabs": {
+				"isolated-margin": "Isolated Margin",
+				"smart-margin": "Smart Margin",
+				"futures": "Futures Positions",
+				"shorts": "Shorts",
+				"spot": "Spot Balances"
+			},
+			"markets-tabs": {
+				"futures": "Futures Markets",
+				"spot": "Spot Markets",
+				"synths": "Synths Markets"
+			},
+			"mobile": {
+				"portfolio": "Portfolio",
+				"open-positions": "Open Positions"
+			},
+			"portfolio-chart": {
+				"welcome": "Welcome to Kwenta",
+				"hero": "Gain exposure to a variety of assets with up to 50x leverage and deep liquidity",
+				"portfolio-value": "Portfolio Value",
+				"buying-power": "Total Buying Power",
+				"upnl": "Unrealized PnL"
+			}
+		},
+		"earn": {
+			"title": "Earn | Kwenta",
+			"heading": "Kwenta Liquidity Mining",
+			"copy": "The program that rewards liquidity providers for the ETH/KWENTA pair through Arrakis Finance has ended.",
+			"unstake-token": {
+				"title": "Step 1. Unstake the pool tokens",
+				"copy": "You can unstake your pool tokens."
+			},
+			"withdraw-liquidity": {
+				"title": "Step 2. Withdraw Your Liquidity",
+				"copy": "You can now withdraw your liquidity from the Arrakis ETH/KWENTA vault.",
+				"pool-link": "Arrakis WETH/KWENTA Pool ↗"
+			}
+		},
+		"rewards": {
+			"title": "Trading Rewards",
+			"copy": "Earn rewards by trading on Kwenta and get boosted rewards for staking.",
+			"claimable": "Claimable",
+			"estimated": "Estimated",
+			"epoch": "Epoch",
+			"apr": "APR",
+			"staking": "Staking",
+			"claim": "Claim",
+			"claim-all": "Claim All",
+			"learn-more": "Learn more",
+			"rewards": "Rewards",
+			"disclaimer": "Disclaimer: The estimated epoch reward values presented are not indicative of the the final rewards value. Please be aware that these estimations may fluctuate due to factors such as: future fees paid and the staking contributions of other participants leading up to the epoch-ending snapshot. For additional insights on rewards, <0>kindly refer to our blog.<0>",
+			"trading-rewards": {
+				"title": "Kwenta Trading Rewards",
+				"copy": "Earn  $KWENTA rewards in proportion to total fees paid."
+			},
+			"op-rewards": {
+				"title": "Kwenta OP Rewards",
+				"copy": "Earn a share of $OP rewards issued by Kwenta."
+			},
+			"snx-rewards": {
+				"title": "SNX OP Rewards",
+				"copy": "Earn a share of $OP rewards issued by Synthetix."
+			}
+		},
+		"stake": {
+			"docs": "Docs →",
+			"portfolio": {
+				"title": "Staking V2",
+				"title-v1": "Staking V1",
+				"balance": {
+					"title": "Balance",
+					"liquid": "Liquid",
+					"escrow": "Escrow",
+					"staked": "Staked",
+					"staked-v1": "Staked V1",
+					"staked-v2": "Staked V2"
+				},
+				"escrow": {
+					"title": "Escrow",
+					"title-v2": "Escrow V2",
+					"title-v1": "Escrow V1",
+					"staked": "Staked",
+					"unstaked": "Unstaked",
+					"vestable": "Vestable"
+				},
+				"rewards": {
+					"title": "Rewards",
+					"claimable": "Claimable",
+					"trading": "Trading",
+					"staking": "Staking",
+					"staking-v1": "Staking V1",
+					"apr": "APR"
+				},
+				"early-vest-rewards": {
+					"title": "Early Vest Rewards",
+					"claimable": "Claimable",
+					"epoch": "Epoch",
+					"early-vest-rewards-tooltip": "Coming soon: Early vest fee rewards will be distributed once per epoch to V2 stakers."
+				},
+				"cooldown": {
+					"title": "Cooldown",
+					"time-left": "Time Left",
+					"warning": "Staked Kwenta incurs a 14d cooldown"
+				}
+			},
+			"tabs": {
+				"staking": {
+					"title": "Staking",
+					"claimable-rewards": "Claimable Rewards",
+					"escrowed-rewards": "Escrowed Rewards",
+					"liquid-rewards": "Liquid Rewards",
+					"annual-percentage-rate": "Annual Percentage Rate",
+					"claim": "Claim",
+					"compound": "Compound",
+					"current-trading-period": "Current Trading Period:",
+					"staking-rewards": {
+						"title": "Staking Rewards",
+						"copy": "Stake your escrowed tokens to earn additional rewards."
+					}
+				},
+				"trading-rewards": {
+					"title": "Trading Rewards",
+					"mobile-title": "Rewards",
+					"pending-for-rewards": "Pending...",
+					"trading-rewards-tooltip": "All trades on Perps V2 are eligible for trading rewards.",
+					"spot-fee-paid": "Spot Fee Paid: Epoch {{EpochPeriod}}",
+					"future-fee-paid": "Futures Fees Paid: Ep. {{EpochPeriod}}",
+					"future-fee-paid-mobile": "Futures Fees Paid",
+					"fees-paid": "Total Fees in Pool: Ep. {{EpochPeriod}}",
+					"fees-paid-mobile": "Total Fees in Pool",
+					"estimated-rewards": "Estimated Reward",
+					"estimated-reward-share": "Estimated Reward Share",
+					"estimated-reward-share-mobile": "Est. Reward Share",
+					"trading-activity-reset": "Time until next epoch",
+					"epoch": "Epoch {{EpochPeriod}}: {{EpochDate}}",
+					"claimable-rewards-epoch": "Claimable Rewards: Epoch {{EpochPeriod}}",
+					"claimable-rewards-all": "Claimable Trading Rewards",
+					"claim-epoch": "Claim: Epoch {{EpochPeriod}}",
+					"claim": "Claim",
+					"estimated-info": "Estimated values do not reflect the final reward value and are subject to change as a result of future fees paid and staked amounts by other participants.",
+					"trading-reward": "Trading Rewards:",
+					"not-eligible": "Eligible",
+					"eligible": "Eligible",
+					"stake-to-earn": "Trade to earn <0>$KWENTA</0> and <0>$OP</> rewards",
+					"stake-to-start": "Trade to earn <0>$KWENTA</0> and <0>$OP</> rewards",
+					"learn-more": "Learn More",
+					"fee-paid": "Fee Paid",
+					"fee-share": "Fee Share",
+					"period": "Period",
+					"total-pool-fees": "Total Pool Fees"
+				},
+				"escrow": {
+					"title": "Escrow",
+					"date": "Date",
+					"time-until-vestable": "Time Until Vestable",
+					"immediately-vestable": "Immediately Vestable",
+					"amount": "Amount",
+					"early-vest-fee": "Early Vest Fee",
+					"status": "Status",
+					"total": "Total",
+					"fee": "Fee",
+					"vest": "VEST",
+					"vest-v1": "VEST V1",
+					"vest-v2": "VEST V2",
+					"transfer": "TRANSFER",
+					"delegate": "DELEGATE",
+					"no-entries": "You have no escrowed entries.",
+					"v1": "V1",
+					"v2": "V2",
+					"vest-modal": {
+						"title": "Early Vesting Fee",
+						"confirm-button": "Confirm",
+						"warning": "Vesting tokens will result in the loss of locked funds as they will be returned to the Kwenta treasury. ",
+						"more-info": "<0>More information here</0>.",
+						"confirm-text": "You will currently forfeit <0>{{totalFee}}</0> in KWENTA by vesting. Do you still wish to proceed?"
+					},
+					"transfer-modal": {
+						"title": "Transfer",
+						"copy": "Indicate the wallet address to which you would like to transfer your selected unstaked escrow entries.",
+						"recipient-address": "Recipient address",
+						"entries-total": "Entries Total",
+						"amount-total": "Amount Total",
+						"transfer-escrowed-kwenta": "Transfer Escrowed $KWENTA"
+					}
+				},
+				"migrate": {
+					"title": "Migrate to Staking V2",
+					"copy": "Continue earning $KWENTA rewards by migrating your stake & escrow entries now.",
+					"claim": {
+						"title" : "Claim",
+						"copy": "Claim any remaining staking rewards",
+						"rewards": "Rewards",
+						"button": "Claim",
+						"trading": {
+							"title": "Trading",
+							"copy": "Claim any remaining trading rewards",
+							"button": "Claim"
+						}
+					},
+					"migrate": {
+						"title" : "Migrate",
+						"copy": "Migrate V1 Escrow",
+						"countdown": "Your migration window closes in <0>{{ time }}</0>. If you don't complete the process before the deadline you will lose your escrow.",
+						"closed": "Your migration window is closed but you can unstake your v1 liquid $KWENTA. Contact us if you need any help.",
+						"completed": "Your migration is complete.",
+						"go-to-staking": "Go to Staking & Rewards Page and <0>stake your $KWENTA</0> to earn rewards.",
+						"remaining": "Remaining",
+						"register": {
+							"title": "Register",
+							"copy": "Register V1 Entries",
+							"button": "Register"
+						},
+						"vest": {
+							"title": "Vest",
+							"copy": "Vest V1 Entries",
+							"button": "Vest"
+						},
+						"approve": {
+							"title": "Approve",
+							"copy": "Approve Contract",
+							"button": "Approve"
+						},
+						"migrate": {
+							"title": "Migrate",
+							"copy": "Migrate all entries",
+							"button": "Migrate"
+						}
+					},
+					"unstake": {
+						"title": "Unstake",
+						"copy": "Migrate V1 Escrow",
+						"unstake-v1": {
+							"title": "Unstake V1",
+							"copy": "Liquid $KWENTA",
+							"kwenta-token": "$KWENTA",
+							"button": "Unstake"
+						}
+					}
+				},
+				"revert": {
+					"title": "Revert to Staking V1",
+					"step-1-copy": "Unstake V2 liquid balance.",
+					"step-2-copy": "Reclaim any remaining v2 escrow entries (no vesting penalty will be incurred)",
+					"reclaim": "Reclaim",
+					"unstake": "Unstake",
+					"staked": "Staked",
+					"reclaimable": "Reclaimable"
+				},
+				"redeem": {
+					"title": "Redeem",
+					"warning": "You migration window is closed. Please use an unmigrated wallet to redeem your escrowed $KWENTA."
+				},
+				"stake-table": {
+					"stake": "Stake",
+					"unstake": "Unstake",
+					"kwenta-token": "KWENTA",
+					"max": "MAX",
+					"ekwenta-token": "Escrowed KWENTA",
+					"redeem": "Redeem",
+					"vekwenta-token": "veKwenta",
+					"vkwenta-token": "vKwenta",
+					"approve": "Approve",
+					"balance": "Balance:"
+				},
+				"delegate": {
+					"title": "Delegate",
+					"copy": "Allow other addresses to collect and stake rewards on your behalf",
+					"manage": "Manage",
+					"manage-copy": "Manage delegated addresses",
+					"address": "Address",
+					"revoke": "Revoke",
+					"no-result": "You have no delegated addresses",
+					"warning": "Coming soon"
+				}
+			}
+		},
+		"history": {
+			"tabs": {
+				"positions": "Positions",
+				"trades": "Trades"
+			},
+			"spot-history-table": {
+				"date-time": "Date/Time",
+				"from": "From",
+				"to": "To",
+				"usd-value": "USD Value",
+				"no-trade-history": "You have no synth trading history",
+				"no-trade-history-link": "Visit the Kwenta exchange to swap synths"
+			},
+			"positions-history-table": {
+				"no-result": "You have no futures positions history"
+			}
+		},
+		"deprecated": {
+			"info": "Deprecated synths can be exchanged for sUSD at any time at the fixed redemption rate.",
+			"button": {
+				"default": "Redeem All",
+				"redeem-synths": "Redeem deprecated synths",
+				"redeeming": "Pending"
+			},
+			"susd-total": "sUSD Total"
+		}
+	},
+	"dashboard-markets": {
+		"page-title": "Markets | Kwenta"
+	},
+	"dashboard-history": {
+		"page-title": "Trade History | Kwenta",
+		"main-title": "Trade History",
+		"subtitle": "History of all past trades on Kwenta",
+		"export-btn": "Export"
+	},
+	"dashboard-stake": {
+		"page-title": "Staking | Kwenta"
+	},
+	"dashboard-stakev1": {
+		"page-title": "V1 Staking | Kwenta"
+	},
+	"dashboard-rewards": {
+		"page-title": "Rewards | Kwenta"
+	},
+	"dashboard-redeem": {
+		"page-title": "Redemption | Kwenta"
+	},
+	"futures": {
+		"page-title": "Kwenta Futures",
+		"cta-buttons": {
+			"copy": "Isolated margin is being replaced with smart margin, where you will have access to conditional orders and be eligible for trading rewards. ",
+			"learn-more": "Learn more",
+			"switch-to-smart-margin": "Switch to Smart Margin",
+			"dismiss": "Dismiss",
+			"close-only": "Positions are in close only mode while the Optimism network performs its Bedrock upgrade"
+		},
+		"wallet-overview": {
+			"no-positions": "You have no open positions. Open a position now: ",
+			"title": "wallet overview",
+			"open-position": "Open a position",
+			"balance": "sUSD balance",
+			"margin-deployed": "Margin deployed",
+			"performance": "wallet performance",
+			"positions": {
+				"title": "your positions",
+				"position": {
+					"title": "position",
+					"long": "long",
+					"short": "short"
+				},
+				"price": "Entry price",
+				"margin": "Remaining margin",
+				"liquidation": "liquidation price",
+				"roi": "ROI"
+			}
+		},
+		"markets-drop-down": {
+			"price": "price",
+			"market": "market",
+			"change": "24H +/-",
+			"no-results": "No markets found"
+		},
+		"market": {
+			"page-title": "{{baseCurrencyKey}} Futures | Kwenta",
+			"page-title-rate": "{{marketName}} - {{rate}} Futures | Kwenta",
+			"sidebar-tab": {
+				"markets": "Markets",
+				"history": "History",
+				"market-price": "Market/Price",
+				"daily-volume": "24H Vol"
+			},
+			"info": {
+				"default-market": "ETH-PERP",
+				"hourly-funding": "Funding Rate",
+				"instant-funding": "Inst. Funding Rate",
+				"fallback-funding": "Funding Rate"
+			},
+			"position-card": {
+				"position-side": "Side",
+				"position-size": "Size",
+				"r-pnl": "Realized P&L",
+				"u-pnl": "Unrealized P&L",
+				"leverage": "Leverage",
+				"liquidation-price": "Liq Price",
+				"net-funding": "Net Funding",
+				"fees": "Fees",
+				"avg-entry-price": "Avg Entry",
+				"tooltips": {
+					"position-side": "Direction of current trade",
+					"position-size": "Notional value of the open position",
+					"u-pnl": "The current unrealized profit or loss on the open position",
+					"r-pnl": "Profit or loss achieved by closing some or all of a position, fees, and all funding applied to this position",
+					"leverage": "Individual position leverage which will vary based on the balance of margin deposited into the market",
+					"liquidation-price": "The estimated oracle price that will trigger a liquidation",
+					"net-funding": "Total funding due at the close of the position",
+					"fees": "Net fees paid to open and/or modify the position",
+					"avg-entry-price": "The average price at which the position was opened"
+				}
+			},
+			"empty-position-card": {
+				"no-position": "No Open Position",
+				"explore-markets": "Explore available Markets"
+			},
+			"state": {
+				"opens-soon": "opening",
+				"closes-soon": "closing",
+				"frozen": "paused",
+				"market-closure": "paused",
+				"system-upgrade": "paused",
+				"circuit-breaker": "paused",
+				"emergency": "paused",
+				"unknown": "paused"
+			},
+			"chart": {
+				"overlay-messages": {
+					"frozen": {
+						"title": "{{baseCurrencyKey}} market has been frozen",
+						"subtitle": "Reset in progress."
+					},
+					"market-closure": {
+						"title": "{{baseCurrencyKey}} market has been paused",
+						"subtitle": ""
+					},
+					"system-upgrade": {
+						"title": "{{baseCurrencyKey}} market paused",
+						"subtitle": "Please check the Synthetix Discord for details."
+					},
+					"circuit-breaker": {
+						"title": "{{baseCurrencyKey}} market has been temporarily paused",
+						"subtitle": "Circuit breaker triggered"
+					},
+					"emergency": {
+						"title": "Emergency shutdown activated for {{baseCurrencyKey}}",
+						"subtitle": "Reset in progress"
+					},
+					"unknown": {
+						"title": "Markets are temporarily paused",
+						"subtitle": ""
+					}
+				}
+			},
+			"trade": {
+				"market": "isolated market",
+				"title": "trade",
+				"perpsv2-disclaimer": "Synthetix Perps V2 markets are currently in alpha. Users assume all risks of interacting with these smart contracts.",
+				"input": {
+					"buy": "buy",
+					"sell": "sell",
+					"remaining-margin": "Remaining margin",
+					"max": "max",
+					"max-leverage-error": "Your current position exceeds the max leverage of ({{maxLeverage}}x). You need to reduce your position or adjust leverage.",
+					"leverage": {
+						"title": "leverage",
+						"buy": "buy",
+						"sell": "sell",
+						"total-leverage": "Total leverage ≈ {{totalLeverage}}x",
+						"close-position": "100% close position + {{leverageDelta}}x leverage",
+						"partial-close-position": "{{closePositionDelta}}% close position",
+						"disclaimer": "Note: A next price update could cause your order to exceed maximum leverage resulting in the order being dropped by the keeper."
+					}
+				},
+				"button": {
+					"enter-amount": "Enter amount",
+					"deposit-margin": "Deposit margin",
+					"withdraw-margin": "Withdraw margin",
+					"deposit": "Deposit",
+					"withdraw": "Withdraw",
+					"edit": "Edit",
+					"open-trade": "Submit order",
+					"warning": "WARNING: this will close your position",
+					"competition-closed": "Competition Closed",
+					"open-position": "Open Position",
+					"modify-position": "modify",
+					"deposit-margin-minimum": "Deposit Margin",
+					"place-next-price-order": "Place Next Price Order",
+					"place-delayed-order": "Place Order",
+					"place-limit-order": "Place Limit Order",
+					"place-stop-order": "Place Stop Market Order",
+					"connect-wallet": "Connect Wallet",
+					"create-account": "Create Account",
+					"deposit-funds": "Deposit Funds"
+				},
+				"margin": {
+					"deposit-susd": "Deposit your sUSD to start trading",
+					"min-initial-margin": "A minimum of {{minInitialMargin}} is required to open a position",
+					"available-margin": "Remaining margin",
+					"helper": "deposit your sUSD to start trading",
+					"available-balance": "sUSD balance",
+					"balance": "Balance",
+					"modal": {
+						"balance": "Balance",
+						"gas-fee": "Gas Fee",
+						"max": "Max",
+						"deposit": {
+							"amount": "Amount",
+							"title": "Deposit",
+							"button": "Deposit Margin",
+							"approve-button": "Approve sUSD",
+							"disclaimer": "A $50 margin minimum is required to open a position.",
+							"min-deposit": "$50 minimum margin to open a position",
+							"min-margin-error": "Position size too small, minimum market margin of $50 required",
+							"exceeds-balance": "Amount exceeds balance",
+							"max-slippage": "Max Slippage"
+						},
+						"withdraw": {
+							"title": "Withdraw",
+							"button": "Withdraw Margin"
+						},
+						"title": "Manage Account Balances",
+						"actions": {
+							"withdraw": "Withdraw",
+							"deposit": "Deposit"
+						},
+						"bridge": {
+							"title": "Bridge & Swap",
+							"low-balance": "Your sUSD balance is low. You can bridge more assets from another network below.",
+							"no-balance": "To get started, you need sUSD to trade on Kwenta. You can bridge assets from another network into sUSD below."
+						},
+						"buttons": {
+							"deposit": "Deposit Margin",
+							"approve": "Approve Permit",
+							"approving": "Approving Permit...",
+							"withdraw": "Withdraw Margin"
+						}
+					}
+				},
+				"delayed-order": {
+					"description": "Delayed orders are subject to a time delay before execution by a keeper. The fill price is subject to volatility as the order is executed at a future price.",
+					"learn-more": "Learn more"
+				},
+				"market-order": {
+					"description": "Market order fees are significantly higher than delayed orders. Reducing your position size below max leverage will reenable closing your position using delayed orders."
+				},
+				"next-price": {
+					"description": "Next Price orders are subject to volatility and execute at the very next on-chain price.",
+					"learn-more": "Learn more"
+				},
+				"cost-basis": {
+					"tooltip": "Dynamic fees are currently in effect and may vary based on market conditions during the execution round"
+				},
+				"trade-balance": {
+					"available-margin": "Available Margin",
+					"locked-margin": "Locked Margin",
+					"no-available-margin": "No available margin",
+					"only-available-margin": "Only {{balance}} available margin",
+					"min-margin": "Min. $50 sUSD required to trade",
+					"tooltip": "Margin currently locked in closed markets. It will become available once the market reopens.",
+					"deposit": "Deposit",
+					"manage-button": "Manage",
+					"no-wallet-connected": "No wallet connected",
+					"no-wallet-connected-detail": "Connect wallet to deposit margin",
+					"connect-wallet-button": "Connect wallet",
+					"no-smart-account": "No account",
+					"no-smart-account-detail": "Create account to start trading",
+					"create-account-button": "Create account"
+				},
+				"confirmation": {
+					"modal": {
+						"approve-order": "Step 1: Approve {{asset}} spend",
+						"confirm-order": {
+							"long": "Confirm Long order",
+							"short": "Confirm Short order"
+						},
+						"close-order": "Close position",
+						"max-leverage-disclaimer": "Note: A next price update could cause your order to exceed maximum leverage resulting in the order being dropped by the keeper.",
+						"disabled-min-margin": "Minimum market margin of $50 required",
+						"disabled-eth-bal": "Min ETH {{depositAmount}} balance required",
+						"disabled-exceeds-price-protection": "Price protection exceeded ",
+						"disabled-quote-invalid": "Invalid swap quote",
+						"disabled-quote-loading": "Loading quote...",
+						"eth-bal-warning": "Conditional orders require a small ETH deposit to use for gas when executing",
+						"delayed-disclaimer": "The fee amount will be deposited to cover trade and automated execution fees. If an order is cancelled or not executed, the deposit will be forfeited to the Synthetix debt pool.",
+						"stop-loss-warning": "Stop loss is close to the liquidation price and cannot be guaranteed to execute before you get liquidated, proceed anyway?",
+						"slippage-warning": "This trade incurs high slippage, proceed anyway?",
+						"quote-invalid-error": "This trade quote is no longer valid, please adjust the margin delta.",
+						"quote-invalid-error-insufficient-balance": "The token balance in insufficient to execute this trade, please adjust the margin delta.",
+						"quote-invalid-error-insufficient-quote": "The quoted amount is insufficient to cover the required deposit amount."
+					}
+				},
+				"leverage": {
+					"modal": {
+						"max-pos": "Max position at current leverage:",
+						"title": "Adjust Leverage",
+						"input-label": "Leverage",
+						"confirm": "Confirm"
+					}
+				},
+				"isolated-margin": {
+					"title": "Isolated Margin"
+				},
+				"preview": {
+					"insufficient-margin": "Insufficient free margin",
+					"error": "Error generating preview"
+				},
+				"fees": {
+					"tooltip": "Fees are displayed as maker / taker. Maker fees apply to orders that reduce the market skew. Taker fees apply to orders that increase the market skew.",
+					"keeper-tooltip": "Dynamic fee to cover automated order execution"
+				},
+				"orders": {
+					"manage-keeper-deposit": {
+						"title": "Manage Account ETH Balance",
+						"withdraw": "Withdraw",
+						"deposit": "Deposit",
+
+						"withdraw-warning": "Withdrawing ETH while you still have open orders pending risks leaving insufficient balance for orders to execute."
+					},
+					"fee-rejection-label": "Fee Rejection",
+					"fee-rejection-tooltip": "This allows you to set a maximum fee on your order. If the dynamic fee exceeds your selected fee limit at the time of execution, the order will not execute."
+				},
+				"edit-leverage": {
+					"failed": "Transaction failed",
+					"insufficient-margin": "Leverage cannot be increased, it exceeds the minimum margin requirement of $40",
+					"insufficient-free-margin": "Leverage cannot be modified, please deposit more margin or reduce open position sizes"
+				},
+				"edit-position": {
+					"market": "Market",
+					"current-size": "Current size",
+					"leverage-change": "Leverage",
+					"position-size": "Position Size",
+					"margin-change": "Margin",
+					"liquidation": "Liquidation",
+					"price-impact": "Price Impact",
+					"fill-price": "Est. Fill Price",
+					"submit-size": "Submit size change",
+					"submit-margin-withdraw": "Withdraw Margin",
+					"submit-margin-deposit": "Deposit Margin",
+					"submit-size-increase": "Increase Size",
+					"submit-size-decrease": "Decrease Size",
+					"submit-close": "Submit Close Order",
+					"current-margin": "Current margin"
+				},
+				"edit-sl-tp": {
+					"title": "Set Position SL/TP",
+					"set-sl-n-tp": "Set SL & TP",
+					"take-profit": "Take Profit",
+					"no-tp": "No TP",
+					"no-sl": "No SL",
+					"stop-loss": "Stop Loss",
+					"entry-price": "Entry Price",
+					"estimated-profit": "Estimated Profit",
+					"estimated-loss": "Estimated Loss",
+					"warning": "This setting applies to the entire position."
+				}
+			},
+			"history": {
+				"history-label": "trade history",
+				"last-n-trades": "last {{ numberOfTrades }} trades",
+				"last-trades": "last trades",
+				"amount-label": "amount",
+				"price-label": "price",
+				"accrued-funding": "accrued funding",
+				"time-label": "time"
+			},
+			"user": {
+				"position": {
+					"tab": "Your Position",
+					"roi": "Unrealized P&L",
+					"roi-tooltip": "This is your profit & loss combined with paid (or received) funding.",
+					"entry": "entry price",
+					"entry-tooltip": "Price at the time of opening the position.",
+					"liquidation": "liquidation price",
+					"liquidation-tooltip": "Price that the position will be liquidated at.",
+					"remaining-margin": "remaining margin",
+					"remaining-margin-tooltip": "Remaining margin is your initial margin + your unrealized profit & loss + funding.",
+					"margin-ratio": "margin ratio",
+					"margin-ratio-tooltip": "Margin ratio is your remaining margin / notional value.",
+					"accrued-funding": "accrued funding",
+					"accrued-funding-tooltip": "Funding is continuous and accrued over time. Longs pay shorts if market is skewed long and vice versa.",
+					"close-position": "close",
+					"manage-position": "manage position",
+					"modal": {
+						"title": "Close position",
+						"size": "Size",
+						"side": "Side",
+						"leverage": "Leverage",
+						"ROI": "ROI",
+						"fee": "Protocol Fee",
+						"fee-total": "Total Fees",
+						"estimated-fill": "Estimated Fill Price",
+						"estimated-price-impact": "Estimated Price Impact",
+						"fee-estimated": "Est. Trade Fees",
+						"liquidation-price": "Liquidation Price",
+						"time-delay": "Delay Until Executable",
+						"keeper-deposit": "Execution Fee",
+						"gas-fee": "Network Gas Fee",
+						"order-type": "Type",
+						"market-order": "Market",
+						"next-price-order": "Next Price",
+						"delayed-order": "Delayed",
+						"deposit": "Total Fees",
+						"np-discount": "Next Price Discount"
+					}
+				},
+				"open-orders": {
+					"tab": "Open Orders",
+					"table": {
+						"market": "Market",
+						"market-type": "Market/Type",
+						"side": "Side",
+						"side-type": "Side/Type",
+						"type": "Type",
+						"size": "Size",
+						"size-price": "Size/Price",
+						"reserved-margin": "Margin",
+						"reduce-only": "Reduce only",
+						"commit-deposit": "Commit Deposit",
+						"price": "Target Price",
+						"current-price": "CL Price",
+						"parameters": "Parameters",
+						"status": "Status",
+						"actions": "Actions",
+						"no-result": "You have no open orders",
+						"open-filter": "Only show open orders"
+					},
+					"actions": {
+						"cancel": "Cancel",
+						"edit": "Edit",
+						"execute": "Execute"
+					},
+					"status": {
+						"pending": "Pending",
+						"expired": "Expired",
+						"failed": "Failed to execute"
+					},
+					"badges": {
+						"expired": "Expired"
+					}
+				},
+				"trades": {
+					"tab": "Trades",
+					"table": {
+						"id": "ID",
+						"size": "size",
+						"pnl": "PnL",
+						"status": "status",
+						"date": "date",
+						"fees": "fees",
+						"price": "price",
+						"side": "side",
+						"market": "market",
+						"side-type": "Side/Type",
+						"market-side": "Market/Side",
+						"price-type": "Price/Type",
+						"no-results": "You have no trade history",
+						"order-type": "order type",
+						"fees-funding": "Fees/Funding",
+						"transaction": "Transaction",
+						"trade-types": {
+							"exit": "exit",
+							"liquidated": "liquidated",
+							"entry": "entry"
+						}
+					},
+					"mobile-table": {
+						"market": "Market",
+						"price": "Price",
+						"side": "Side",
+						"fees": "Fees",
+						"date": "Date",
+						"type": "Order Type",
+						"size": "Size",
+						"pnl": "PnL"
+					}
+				},
+				"transfers": {
+					"tab": "Transfers",
+					"table": {
+						"action": "action",
+						"amount": "amount",
+						"date": "date",
+						"transaction": "transaction",
+						"no-results": "You have no transfer history"
+					}
+				}
+			},
+			"errors": {
+				"insufficient-margin": "Insufficient margin for this order"
+			}
+		},
+		"modals": {
+			"profit-calculator": {
+				"title": "Profit Calculator",
+				"profit-details": {
+					"row-name": {
+						"entry-price": "Entry Price: ",
+						"take-profit": "Take Profit: ",
+						"stop-loss": "Stop Loss: ",
+						"size": "Size: "
+					},
+					"details": {
+						"entry-price": "Entry Price",
+						"market": "Market",
+						"sell": "Sell",
+						"at": "at"
+					}
+				}
+			},
+			"share": {
+				"title": "Share",
+				"buttons": {
+					"download": "Download",
+					"twitter": "Tweet it"
+				},
+				"position-metadata": {
+					"open-at": "opened on",
+					"created-on": "created on",
+					"avg-open-price": "avg open price",
+					"current-price": "current price"
+				}
+			},
+			"onboard": {
+				"sm-title": "Smart Margin",
+				"cm-title": "Cross Margin",
+				"cm-intro": "Start by creating your cross margin account",
+				"sm-intro": "Start by creating your smart margin account",
+				"step1-intro": "Start by creating your smart margin account",
+				"step2-intro": "Now, approve the contract to spend sUSD",
+				"step3-intro": "Lastly, deposit funds to begin trading",
+				"step3-complete": "Your smart margin account has been successfully created!",
+				"faq1": "What is smart margin?",
+				"faq2": "Is smart margin better than isolated margin?",
+				"faq3": "How will a smart margin account affect my trading?",
+				"unsupported-network": "Smart margin is not supported on this network",
+				"deposit": "Deposit"
+			}
+		}
+	},
+	"leaderboard": {
+		"page-title": "Leaderboard | Kwenta",
+		"leaderboard": {
+			"table": {
+				"title": "{{ activeTab }} Traders",
+				"rank": "Rank",
+				"trader": "Trader",
+				"total-trades": "Total Trades",
+				"total-volume": "Total Volume",
+				"liquidations": "Liquidations",
+				"24h-pnl": "24H P&L",
+				"pnl": "P&L",
+				"total-pnl": "P&L ($)",
+				"percent-pnl": "P&L (%)",
+				"rank-mobile": "#",
+				"no-result": "No results found. Connect a wallet."
+			}
+		},
+		"trader-history": {
+			"table": {
+				"back": "Back",
+				"timestamp": "Date/Time",
+				"market": "Market",
+				"status": "Status",
+				"liquidated": "Liquidated",
+				"total-trades": "Trades",
+				"total-volume": "Total Volume",
+				"total-pnl": "Realized P&L",
+				"funding": "Funding"
+			},
+			"mobile-table": {
+				"market": "Market",
+				"volume": "Volume",
+				"status": "Status",
+				"funding": "Funding",
+				"pnl": "PnL",
+				"timestamp": "Date"
+			}
+		},
+		"competition": {
+			"title": "Competition",
+			"table": {
+				"table-updates": "Table data updates daily",
+				"no-results": "No competition standings available"
+			}
+		}
+	},
+	"referrals": {
+		"page-title": "Referrals | Kwenta",
+		"title": "Referral Program",
+		"copy": "Earn boosted rewards from trading, or become an affiliate to earn even more.",
+		"docs": "Docs →",
+		"table": {
+			"no-results-table": "No rewards distribution history yet.",
+			"switch-to-optimism-prompt": "Switch to Optimism to view your rewards distribution history.",
+			"history": {
+				"title": "Boosted Rewards History",
+				"copy": "Track your weekly boosted trading rewards."
+			},
+			"codes": {
+				"title": "Referral Codes",
+				"copy": "Earn a portion of the $KWENTA rewards earned by traders using your referral codes",
+				"create-code-button": "Create Code"
+			},
+			"header": {
+				"referral-code": "Referral Code",
+				"total-volume": "Total Volume",
+				"traders-referred": "Traders Referred",
+				"trades-referred": "Trades Referred",
+				"kwenta-earned": "$KWENTA Earned",
+				"epoch": "Epoch"
+			}
+		},
+		"traders": {
+			"title": "traders",
+			"rewards-boost": "Rewards Boost",
+			"total-volume": "Total Trading Volume",
+			"kwenta-earned": "Total $KWENTA Earned",
+			"claim": "Claim",
+			"staking": "Staking ↗",
+			"level-up": "Level Up",
+			"dashboard": {
+				"rewards-boost": "Rewards Boost",
+				"total-volume": "Total Volume",
+				"kwenta-earned": "$KWENTA Earned"
+			}
+		},
+		"affiliates": {
+			"title": "affiliates",
+			"dashboard": {
+				"traders-referred": "Total Traders Referred",
+				"trading-volume": "Total Trading Volume",
+				"kwenta-earned": "Total $KWENTA Earned",
+				"unlocked-nft": "You Have Unlocked"
+			},
+			"nft": {
+				"bronze": "Bronze",
+				"silver": "Silver",
+				"gold": "Gold",
+				"boost": "Boost",
+				"preview": "Preview"
+			}, 
+			"view-all-rates": "View Tier Details →",
+			"rates": "Rates →",
+			"modal": {
+				"create-referral-code": {
+					"title": "Create Referral Code",
+					"label": "Referral Code",
+					"input-placeholder": "Enter Code",
+					"create-referral-button": "Create Referral"
+				},
+				"nft-preview": {
+					"tier-1": "Tier 1",
+					"tier-level": "Tier",
+					"nft-tier": "NFT Tier",
+					"view-button": "View on OpenSea"
+				},
+				"referrer": {
+					"title": "Referrer",
+					"welcome-message": "You are invited to Kwenta",
+					"badge-copy": "Receive a <0>{{boost}}</0> boost on trading rewards",
+					"boost-button": "Mint Boost",
+					"learn-more": "Learn more about the Kwenta",
+					"referral-program": " <0>Referral program</0>",
+					"low-fees": {
+						"title": "Low fees",
+						"copy": "Trade with fees as low as 0.015% with up to 50x leverage on a variety assets."
+					},
+					"deep-liquidity": {
+						"title": "Deep Liquidity",
+						"copy": "Enjoy deep liquidity powered by the Synthetix protocol."
+					},
+					"trading-rewards": {
+						"title": "Trading Rewards",
+						"copy": "Earn $KWENTA rewards on every trade."
+					},
+					"get-started-button": "Get Started",
+					"no-self-referred": "You cannot refer yourself.",
+					"congratulations": "Congratulations!",
+					"mint-message": "You minted a <0>{{tier}}</0> Rewards Boost.",
+					"earn-boost": "You're earning a <0>{{boost}}</0> boost on trading rewards.",
+					"stake-more": "Stake <0>$KWENTA</0> to earn even more.",
+					"trade-now-button": "Trade Now"
+				}
+			}
+		}
+	},
+	"not-found": {
+		"page-title": "Not Found | Kwenta",
+		"title": "404",
+		"subtitle": "Page not found."
+	},
+	"system-status": {
+		"page-title": "Maintenance | Kwenta",
+		"title": "Kwenta is currently down for maintenance",
+		"subtitle": "We apologise for any inconvenience caused, it will be back shortly."
+	},
+	"modals": {
+		"select-currency": {
+			"title": "select tokens",
+			"header": {
+				"search-results": "search results",
+				"category-synths": "{{category}} synths",
+				"tokens": "tokens",
+				"your-synths": "your synths",
+				"holdings": "holdings"
+			},
+			"search": {
+				"placeholder": "search tokens",
+				"empty-results": "No results found. Please try again."
+			}
+		},
+		"select-token": {
+			"title": "select token",
+			"header": {
+				"search-results": "search results",
+				"all-tokens": "all tokens",
+				"holdings": "holdings"
+			},
+			"search": {
+				"placeholder": "search tokens",
+				"empty-results": "No results found. Please try again."
+			}
+		},
+		"select-short-currency": {
+			"title": "select short asset",
+			"header": {
+				"your-synths": "your <0>{{currencyKey}}</0> balance"
+			}
+		},
+		"confirm-transaction": {
+			"title": "confirm transaction",
+			"confirm-with-provider": "Confirm your transaction through your wallet.",
+			"exchange-fee-hint": "The Synthetix protocol exchange fee for <0>{{currencyKey}}</0>.",
+			"price-adjustment-hint": "This transaction is subject to a price adjustment period."
+		},
+		"approve-transaction": {
+			"title": "approve transaction",
+			"confirm-with-provider": "Confirm your transaction through your wallet."
+		},
+		"menu": {
+			"title": "menu"
+		},
+		"settings": {
+			"title": "settings",
+			"options": {
+				"currency": "currency",
+				"language": "language",
+				"theme": "theme"
+			}
+		},
+		"wallet": {
+			"title": "wallet options"
+		},
+		"notifications": {
+			"title": "notifications",
+			"fee-reclaiming-synths": {
+				"title": "Fee reclaiming currencies"
+			},
+			"open-orders": {
+				"title": "open orders",
+				"no-results": "No open orders"
+			},
+			"recent-notifications": {
+				"title": "recent notifications",
+				"no-results": "No recent transactions"
+			},
+			"deprecated-synths": {
+				"title": "Deprecated Synths",
+				"description": "Your balance includes deprecated synths which will remained frozen until redeemed.",
+				"short-description": "Redeem deprecated synths ({{amount}} {{asset}})",
+				"button": {
+					"default": "Redeem",
+					"redeeming": "Redeeming"
+				}
+			},
+			"all-notifications": {
+				"title": "all notifications",
+				"no-results": "None"
+			},
+			"view-all": "view all"
+		},
+		"deprecated-synths": {
+			"from": "From",
+			"to": "Into"
+		},
+		"settle-transaction": {
+			"title": "settle",
+			"confirm-with-provider": "Confirm your transaction through your wallet."
+		},
+		"uniswap-widget": {
+			"title": "Swap Widget"
+		}
+	},
+	"common": {
+		"order-type": {
+			"market": "market",
+			"limit": "limit"
+		},
+		"l2-cta": "Perpetual futures are available on Optimism L2",
+		"perp-cta": "Trade perpetual futures now!",
+		"currency": {
+			"currency-amount": "<0>{{currencyKey}}</0> Amount",
+			"exchange-fee": "Exchange Fee",
+			"currency-value": "<0>{{currencyKey}}</0> Value",
+			"estimated-currency-value": "<0>{{currencyKey}}</0> Trade Value",
+			"currency-contract": "<0>{{currencyKey}}</0> Contract",
+			"currency-price": "<0>{{currencyKey}}</0> Price",
+			"synthetic-currency-name": "Synthetic {{currencyName}}",
+			"futures-market-short-name": "{{currencyName}} Perpetual",
+			"futures-market-long-name": "Synthetic {{currencyName}} Perpetual",
+			"trade-to-currency": "Trade to <0>{{currencyKey}}</0>",
+			"bridge-currency": "Bridge <0>{{currencyKey}}</0>",
+			"buy-currency": "Buy <0>{{currencyKey}}</0>",
+			"get-currency": "Get <0>{{currencyKey}}</0>",
+			"currency-exchange": "<0>{{orderType}}</0> <1>{{quoteCurrencyAmount}}</1> <2>{{quoteCurrencyKey}}</2> for <3>{{baseCurrencyAmount}}</3> <4>{{baseCurrencyKey}}</4>",
+			"swap-currency": "Swap for <0>{{currencyKey}}</0>",
+			"trade-into": "Trade into <0>{{currencyKey}}</0>",
+			"price-adjustment": "Price Adjustment",
+			"deprecated": "Deprecated"
+		},
+		"currency-category": {
+			"crypto": "crypto",
+			"forex": "forex",
+			"commodity": "commodities"
+		},
+		"contract": "contract",
+		"chart-periods": {
+			"1H": "1H",
+			"4H": "4H",
+			"1D": "1D",
+			"1W": "1W",
+			"1M": "1M"
+		},
+		"transaction": {
+			"revert-reason": "Error: {{reason}}",
+			"error": "An unexpected error occurred.",
+			"reattempt": "Try again",
+			"transaction-sent": "Your transaction has been sent to the network.",
+			"transaction-failed": "Your transaction has failed",
+			"transaction-confirmed": "Your transaction has succeeded!"
+		},
+		"price": "price",
+		"asset": "asset",
+		"cancel": "cancel",
+		"order-types": {
+			"market": "market order",
+			"limit": "limit order"
+		},
+		"features": {
+			"coming-soon": "Soon"
+		},
+		"wallet": {
+			"connect-wallet": "Connect Wallet",
+			"account-info": "Account Info",
+			"switch-accounts": "Switch Accounts",
+			"disconnect-wallet": "Disconnect Wallet",
+			"unsupported-network": "Unsupported Network"
+		},
+		"tx-status": {
+			"waiting": "Waiting",
+			"open": "Open",
+			"closed": "Closed",
+			"closing": "Closing",
+			"in": "Transferred in",
+			"out": "Transferred out",
+			"complete": "Complete",
+			"pending": "Pending",
+			"confirmed": "Confirmed",
+			"cancelled": "Cancelled",
+			"failed": "failed"
+		},
+		"switch": "switch",
+		"summary": {
+			"gas-prices": {
+				"gas-price": "Network Gas Fee",
+				"max-fee": "max fee",
+				"average": "Average",
+				"fast": "Fast",
+				"fastest": "Fastest"
+			},
+			"fee": "fee",
+			"fee-cost": "fee cost",
+			"max-slippage-tolerance": {
+				"title": "Max Slippage Tolerance",
+				"helper": "Choose the maximum amount of slippage you are willing to accept",
+				"low": "Low",
+				"medium": "Medium",
+				"high": "High"
+			}
+		},
+		"custom": "Custom",
+		"edit": "edit",
+		"powered-by": "Powered by",
+		"dex-aggregators": {
+			"1inch": {
+				"title": "DEX Aggregator - 1inch.exchange"
+			}
+		},
+		"totals": {
+			"total-synth-value": "total synth value",
+			"your-currencyKey-balance": "your <0>{{currencyKey}}</0> balance"
+		},
+		"pagination": {
+			"page": "Page",
+			"page-of-total-pages": "{{page}} of {{totalPages}}"
+		},
+		"time": {
+			"years": "y",
+			"months": "mo",
+			"weeks": "w",
+			"days": "d",
+			"hours": "h",
+			"minutes": "m",
+			"seconds": "s",
+			"n-sec-ago": "{{ timeDelta }}s ago",
+			"n-min-ago": "{{ timeDelta }}m ago",
+			"n-hr-ago": "{{ timeDelta }}h ago",
+			"n-day-ago": "{{ timeDelta }}d ago",
+			"n-week-ago": "{{ timeDelta }}w ago",
+			"n-year-ago": "{{ timeDelta }}y ago"
+		},
+		"min": "min",
+		"competition": {
+			"before-launch-date": "Competition coming soon",
+			"24h-before-launch-date": "Competition starting in",
+			"during-competition": "Competition Live",
+			"24h-before-end-date": "Competition ending in",
+			"24h-after-end-date": "Competition ended"
+		},
+		"learn-more": "learn more"
+	},
+	"mobile-menu": {
+		"theme": {
+			"title": "Theme",
+			"options": {
+				"dark": "Dark",
+				"light": "Light"
+			}
+		},
+		"currency": "Currency",
+		"cancel": "Cancel",
+		"wallet": "Wallet",
+		"network": "Network",
+		"language": "Language",
+		"connect": "Connect",
+		"disconnect": "Disconnect",
+		"account-info": "Account Info",
+		"switch-network": "Switch Networks",
+		"bridge": "Bridge"
+	}
+}
