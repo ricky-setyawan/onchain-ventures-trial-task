@@ -1,3 +1,4 @@
+import { useUser, UserButton, SignInButton } from '@clerk/nextjs'
 import { useChainModal, useConnectModal } from '@rainbow-me/rainbowkit'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
@@ -27,6 +28,8 @@ const WalletButtons: React.FC = () => {
 	const currentTheme = useAppSelector(selectCurrentTheme)
 	const { openConnectModal } = useConnectModal()
 	const { openChainModal } = useChainModal()
+
+	const { isSignedIn } = useUser()
 
 	const ThemeIcon = currentTheme === 'dark' ? SunIcon : MoonIcon
 
@@ -81,6 +84,15 @@ const WalletButtons: React.FC = () => {
 			<MenuButton onClick={toggleTheme} noOutline>
 				<ThemeIcon width={20} />
 			</MenuButton>
+			{isSignedIn ? (
+				<UserButton appearance={{ elements: SunIcon }} showName={true} />
+			) : (
+				<SignInButton>
+					<Button size="small" variant="flat" mono>
+						Sign In
+					</Button>
+				</SignInButton>
+			)}
 		</Container>
 	)
 }

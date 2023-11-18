@@ -1,3 +1,5 @@
+import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
 import { createTheme, MuiThemeProvider } from '@material-ui/core'
 import { darkTheme, lightTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import * as Sentry from '@sentry/browser'
@@ -33,6 +35,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '@reach/dialog/styles.css'
 import '@rainbow-me/rainbowkit/styles.css'
+import 'styles/clerk-styles.css'
 import '../i18n'
 
 type NextPageWithLayout = NextPage & {
@@ -80,12 +83,18 @@ const InnerApp: FC<AppPropsWithLayout> = ({ Component, pageProps }) => {
 		>
 			<ThemeProvider theme={theme}>
 				<MuiThemeProvider theme={muiTheme}>
-					<Layout>
-						<AcknowledgementModal />
-						<SystemStatus>{getLayout(<Component {...pageProps} />)}</SystemStatus>
-					</Layout>
-					<ErrorNotifier />
-					<ReactQueryDevtools position="top-left" />
+					<ClerkProvider
+						appearance={{
+							baseTheme: currentTheme === 'dark' ? dark : undefined,
+						}}
+					>
+						<Layout>
+							<AcknowledgementModal />
+							<SystemStatus>{getLayout(<Component {...pageProps} />)}</SystemStatus>
+						</Layout>
+						<ErrorNotifier />
+						<ReactQueryDevtools position="top-left" />
+					</ClerkProvider>
 				</MuiThemeProvider>
 			</ThemeProvider>
 		</RainbowKitProvider>
