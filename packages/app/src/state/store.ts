@@ -15,6 +15,8 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
+import api from '../api'
+
 import appReducer from './app/reducer'
 import balancesReducer from './balances/reducer'
 import earnReducer from './earn/reducer'
@@ -71,7 +73,7 @@ export const setupStore = (preloadedState?: PreloadedState<any>) =>
 				serializableCheck: {
 					ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
 				},
-				thunk: { extraArgument: { sdk } },
+				thunk: { extraArgument: { sdk, api } },
 			})
 			return LOG_REDUX ? baseMiddleware.concat(logger) : baseMiddleware
 		},
@@ -86,7 +88,7 @@ export type AppStore = typeof store
 export type ThunkConfig = {
 	dispatch: AppDispatch
 	state: RootState
-	extra: { sdk: KwentaSDK }
+	extra: { sdk: KwentaSDK; api: any }
 }
 export type AppThunk<ReturnType = void> = ThunkAction<
 	ReturnType,

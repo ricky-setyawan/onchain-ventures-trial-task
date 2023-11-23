@@ -17,5 +17,5 @@ export type QueryStatus = {
 export type ThunkConfig = {
 	dispatch: AppDispatch
 	state: RootState
-	extra: { sdk: KwentaSDK }
+	extra: { sdk: KwentaSDK; api: any }
 }

@@ -5,14 +5,14 @@ import { ThunkConfig } from 'state/types'
 
 export const checkSynthetixStatus = createAsyncThunk<boolean, void, ThunkConfig>(
 	'app/checkSynthetixStatus',
-	(_, { extra: { sdk } }) => {
-		return sdk.system.getSynthetixStatus()
+	(_, { extra: { api } }) => {
+		return api.system.getSynthetixStatus()
 	}
 )
 
 export const fetchKwentaStatus = createAsyncThunk<KwentaStatus, void, ThunkConfig>(
 	'app/fetchKwentaStatus',
-	(_, { extra: { sdk } }) => {
-		return sdk.system.getKwentaStatus()
+	(_, { extra: { api } }) => {
+		return api.system.getKwentaStatus()
 	}
 )

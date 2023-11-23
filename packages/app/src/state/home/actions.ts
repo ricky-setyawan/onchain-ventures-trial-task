@@ -12,9 +12,9 @@ export const fetchOptimismMarkets = createAsyncThunk<
 	{ markets: PerpsMarketV2<string>[] },
 	providers.Provider,
 	ThunkConfig
->('home/fetchOptimismMarkets', async (mainnetL2Provider, { extra: { sdk } }) => {
+>('home/fetchOptimismMarkets', async (mainnetL2Provider, { extra: { api } }) => {
 	// For the home page we always fetch OP mainnet markets
-	const markets = await sdk.futures.getMarkets({ provider: mainnetL2Provider, networkId: 10 })
+	const markets = await api.futures.getMarkets({ provider: mainnetL2Provider, networkId: 10 })
 	const serializedMarkets = serializeV2Markets(markets)
 	return { markets: serializedMarkets }
 })
@@ -23,9 +23,9 @@ export const fetchFuturesStats = createAsyncThunk<
 	Awaited<ReturnType<KwentaSDK['stats']['getFuturesStats']>>,
 	void,
 	ThunkConfig
->('home/fetchFuturesStats', async (_, { extra: { sdk } }) => {
+>('home/fetchFuturesStats', async (_, { extra: { api } }) => {
 	try {
-		return await sdk.stats.getFuturesStats()
+		return await api.stats.getFuturesStats()
 	} catch (error) {
 		logError(error)
 		notifyError('Failed to fetch futures stats', error)

@@ -10,12 +10,12 @@ import { BalancesActionReturn } from './types'
 
 export const fetchBalances = createAsyncThunk<BalancesActionReturn<string>, void, ThunkConfig>(
 	'balances/fetchBalances',
-	async (_, { getState, extra: { sdk } }) => {
+	async (_, { getState, extra: { api } }) => {
 		const { wallet } = getState()
 		if (!wallet.walletAddress) return ZERO_BALANCES
 		const [{ balancesMap, totalUSDBalance, susdWalletBalance }, tokenBalances] = await Promise.all([
-			sdk.synths.getSynthBalances(wallet.walletAddress),
-			sdk.exchange.getTokenBalances(wallet.walletAddress),
+			api.synths.getSynthBalances(wallet.walletAddress),
+			api.exchange.getTokenBalances(wallet.walletAddress),
 		])
 
 		return serializeBalances(balancesMap, totalUSDBalance, tokenBalances, susdWalletBalance)
@@ -26,11 +26,11 @@ export const fetchV3BalancesAndAllowances = createAsyncThunk<
 	Partial<SynthV3BalancesAndAllowances<string>> | undefined,
 	string[],
 	ThunkConfig
->('balances/fetchV3BalancesAndAllowances', async (spenders, { getState, extra: { sdk } }) => {
+>('balances/fetchV3BalancesAndAllowances', async (spenders, { getState, extra: { api } }) => {
 	const { wallet } = getState()
 	try {
 		if (!wallet.walletAddress) return
-		const res = await sdk.synths.getSynthV3BalancesAndAllowances(wallet.walletAddress, spenders)
+		const res = await api.synths.getSynthV3BalancesAndAllowances(wallet.walletAddress, spenders)
 		return serializeV3Balances(res)
 	} catch (e) {
 		notifyError('Error fetching v3 balances', e)
