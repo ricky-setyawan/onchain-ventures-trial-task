@@ -1,5 +1,5 @@
 import { NetworkId } from '@kwenta/sdk/types'
-import { getRatesEndpoint, getCandles } from '@kwenta/sdk/utils'
+import { getRatesEndpoint, getCandles, CandleResult } from '@kwenta/sdk/utils'
 import { getPythCandles } from 'api/futures'
 
 import { DEFAULT_NETWORK_ID } from 'constants/defaults'
@@ -16,7 +16,7 @@ export const requestCandlesticks = async (
 	const ratesEndpoint = getRatesEndpoint(networkId)
 
 	if (period <= 3600) {
-		const response = await getPythCandles()
+		const response = (await getPythCandles()) as []
 		return response
 	} else {
 		const response = await getCandles(
