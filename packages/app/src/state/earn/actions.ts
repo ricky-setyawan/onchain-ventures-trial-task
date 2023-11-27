@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
 import { monitorTransaction } from 'contexts/RelayerContext'

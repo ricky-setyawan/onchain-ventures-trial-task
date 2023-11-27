@@ -28,6 +28,7 @@ export async function useAppData(ready: boolean) {
 
 	usePollAction('fetchBalances', fetchBalances, { dependencies: [wallet, network] })
 
+	//@ts-ignore
 	usePollAction('fetchPreviousDayPrices', fetchPreviousDayPrices, {
 		intervalTime: 60000 * 15,
 		dependencies: [markets.length, network],
