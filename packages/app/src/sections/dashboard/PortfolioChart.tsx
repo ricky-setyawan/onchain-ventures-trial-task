@@ -2,8 +2,9 @@ import { ZERO_WEI } from '@kwenta/sdk/constants'
 import { Period } from '@kwenta/sdk/constants'
 import { formatDollars, formatPercent } from '@kwenta/sdk/utils'
 import { formatChartDate, formatChartTime, formatShortDateWithTime } from '@kwenta/sdk/utils'
+import { getPortfolioPrices } from 'api/prices'
 import Link from 'next/link'
-import { FC, useMemo, useState } from 'react'
+import { FC, useMemo, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts'
 import styled, { useTheme } from 'styled-components'
@@ -21,9 +22,9 @@ import {
 	selectFuturesPortfolio,
 	selectPortfolioChartData,
 	selectSelectedPortfolioTimeframe,
-	selectTotalUnrealizedPnl,
 } from 'state/futures/selectors'
 import { useAppSelector } from 'state/hooks'
+import logError from 'utils/logError'
 
 import { Timeframe } from './Timeframe'
 
@@ -136,10 +137,32 @@ const PortfolioChart: FC = () => {
 	const { cross_margin: crossPortfolioData, smart_margin: smartPortfolioData } =
 		useAppSelector(selectPortfolioChartData)
 
-	const upnl = useAppSelector(selectTotalUnrealizedPnl)
+	// const upnl = useAppSelector(selectTotalUnrealizedPnl)
+	const [upnl, setUpnl] = useState(0)
 
 	const [hoverValue, setHoverValue] = useState<number | null>(null)
 	const [hoverTitle, setHoverTitle] = useState<string | null>(null)
+
+	useEffect(() => {
+		interface PortfolioPricesResult {
+			hoverValue: number
+			upnl: number
+		}
+
+		// Define an asynchronous function to get updated prices
+		const fetchPortfolioPrices = async () => {
+			try {
+				const item = await getPortfolioPrices()
+				const portfolioPricesResult = item as PortfolioPricesResult
+
+				if (portfolioPricesResult.hoverValue) setHoverValue(portfolioPricesResult.hoverValue)
+				if (portfolioPricesResult.upnl) setUpnl(portfolioPricesResult.upnl)
+			} catch (err) {
+				logError(err)
+			}
+		}
+		fetchPortfolioPrices()
+	}, [])
 
 	const total = useMemo(
 		() => (accountType === 'cross_margin' ? crossTotal : smartTotal),
@@ -188,7 +211,7 @@ const PortfolioChart: FC = () => {
 					<GridBox>
 						<PortfolioTitle>{t('dashboard.overview.portfolio-chart.upnl')}</PortfolioTitle>
 						<NumericValue colored value={upnl ?? ZERO_WEI}>
-							{upnl.gt(ZERO_WEI) ? '+' : ''}
+							{/* {upnl.gt(ZERO_WEI) ? '+' : ''} */}
 							{formatDollars(upnl, { suggestDecimals: true })}
 						</NumericValue>
 					</GridBox>

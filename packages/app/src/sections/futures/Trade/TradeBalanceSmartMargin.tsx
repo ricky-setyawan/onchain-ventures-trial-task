@@ -1,6 +1,6 @@
+import { useUser, SignInButton } from '@clerk/nextjs'
 import { MIN_MARGIN_AMOUNT } from '@kwenta/sdk/constants'
 import { formatDollars } from '@kwenta/sdk/utils'
-import { useConnectModal } from '@rainbow-me/rainbowkit'
 import { FC, memo, useCallback, useMemo, useReducer } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import styled from 'styled-components'
@@ -52,6 +52,7 @@ const TradeBalance = memo(() => {
 	const { t } = useTranslation()
 	const dispatch = useAppDispatch()
 	const [expanded, toggleExpanded] = useReducer((e) => !e, false)
+	const { isSignedIn } = useUser()
 
 	const { deviceType } = useWindowSize()
 	const accountMargin = useAppSelector(selectTotalAvailableMargin)
@@ -59,7 +60,6 @@ const TradeBalance = memo(() => {
 	const ethBal = useAppSelector(selectKeeperEthBalance)
 	const openModal = useAppSelector(selectShowModal)
 	const { isWalletConnected } = Connector.useContainer()
-	const { openConnectModal } = useConnectModal()
 	const smartMarginAccount = useAppSelector(selectSmartMarginAccount)
 
 	const { isMobile, size } = useMemo(() => {
@@ -79,7 +79,7 @@ const TradeBalance = memo(() => {
 	return (
 		<Container mobile={isMobile}>
 			<BalanceContainer>
-				{!isWalletConnected ? (
+				{!isSignedIn ? (
 					<DepositContainer>
 						<FlexDivCol>
 							<Body size="medium" color="secondary">
@@ -89,9 +89,11 @@ const TradeBalance = memo(() => {
 								{t('futures.market.trade.trade-balance.no-wallet-connected-detail')}
 							</Body>
 						</FlexDivCol>
-						<Button variant="yellow" size="xsmall" textTransform="none" onClick={openConnectModal}>
-							{t('futures.market.trade.trade-balance.connect-wallet-button')}
-						</Button>
+						<SignInButton>
+							<Button variant="yellow" size="xsmall" textTransform="none">
+								Sign In
+							</Button>
+						</SignInButton>
 					</DepositContainer>
 				) : !smartMarginAccount ? (
 					<DepositContainer>

@@ -92,7 +92,7 @@ export const fetchV3Markets = createAsyncThunk<
 		return { markets: v3Markets.map(serializeV3Market), networkId }
 	} catch (err) {
 		logError(err)
-		notifyError('Failed to fetch markets', err)
+		// notifyError('Failed to fetch markets', err)
 		throw err
 	}
 })

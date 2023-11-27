@@ -1,3 +1,4 @@
+import { getUpdatedPrices } from 'api/prices'
 import { useEffect } from 'react'
 
 import { fetchBalances } from 'state/balances/actions'
@@ -9,10 +10,11 @@ import { setConnectionError } from 'state/prices/reducer'
 import sdk from 'state/sdk'
 import { selectNetwork, selectWallet } from 'state/wallet/selectors'
 import { serializePrices } from 'utils/futures'
+import logError from 'utils/logError'
 
 import { checkSynthetixStatus } from './actions'
 
-export function useAppData(ready: boolean) {
+export async function useAppData(ready: boolean) {
 	const dispatch = useAppDispatch()
 	const wallet = useAppSelector(selectWallet)
 	const markets = useAppSelector(selectMarkets)
@@ -44,13 +46,28 @@ export function useAppData(ready: boolean) {
 	}, [ready])
 
 	useEffect(() => {
-		sdk.prices.onPricesUpdated(({ prices, type, source }) => {
-			dispatch(updatePrices(serializePrices(prices), type))
-			if (source === 'stream') {
-				// must be connected again, remove any error
-				dispatch(setConnectionError(null))
+		interface PricesResult {
+			prices: object
+			type: any
+			source: string
+		}
+
+		// Define an asynchronous function to get updated prices
+		const fetchAndHandlePrices = async () => {
+			try {
+				const item = await getUpdatedPrices()
+				const pricesResult = item as PricesResult
+
+				if (pricesResult.prices)
+					dispatch(updatePrices(serializePrices(pricesResult.prices), pricesResult.type))
+				if (pricesResult.source === 'stream') dispatch(setConnectionError(null))
+			} catch (err) {
+				logError(err)
 			}
-		})
+		}
+
+		fetchAndHandlePrices()
+		setInterval(fetchAndHandlePrices, 5000)
 
 		sdk.prices.onPricesConnectionUpdated(({ error }) => {
 			dispatch(setConnectionError(error?.message))

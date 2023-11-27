@@ -157,7 +157,7 @@ export const fetchMarketsV2 = createAsyncThunk<
 		return { markets: serializedMarkets, networkId }
 	} catch (err) {
 		logError(err)
-		notifyError('Failed to fetch markets', err)
+		// notifyError('Failed to fetch markets', err)
 		throw err
 	}
 })

@@ -1,8 +1,8 @@
+import { useUser, SignInButton } from '@clerk/nextjs'
 import { ZERO_WEI } from '@kwenta/sdk/constants'
 import { MIN_MARGIN_AMOUNT } from '@kwenta/sdk/constants'
 import { FuturesMarginType } from '@kwenta/sdk/types'
 import { isZero } from '@kwenta/sdk/utils'
-import { useConnectModal } from '@rainbow-me/rainbowkit'
 import { wei } from '@synthetixio/wei'
 import React, { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -11,7 +11,6 @@ import styled from 'styled-components'
 import Button from 'components/Button'
 import { ERROR_MESSAGES } from 'components/ErrorNotifier'
 import Error from 'components/ErrorView'
-import Connector from 'containers/Connector'
 import { previewErrorI18n } from 'queries/futures/constants'
 import { setOpenModal } from 'state/app/reducer'
 import {
@@ -50,8 +49,7 @@ import { orderPriceInvalidLabel } from 'utils/futures'
 const ManagePosition: React.FC = () => {
 	const { t } = useTranslation()
 	const dispatch = useAppDispatch()
-	const { isWalletConnected } = Connector.useContainer()
-	const { openConnectModal } = useConnectModal()
+	const { isSignedIn } = useUser()
 
 	const { susdSize } = useAppSelector(selectSmartMarginTradeInputs)
 	const maxLeverageValue = useAppSelector(selectMaxLeverage)
@@ -106,9 +104,7 @@ const ManagePosition: React.FC = () => {
 	}, [accountMargin, lockedMargin])
 
 	const otherReason = useMemo(() => {
-		if (!isWalletConnected) {
-			return { key: 'futures.market.trade.button.connect-wallet', action: openConnectModal }
-		} else if (!smartMarginAccount) {
+		if (!smartMarginAccount) {
 			return {
 				key: 'futures.market.trade.button.create-account',
 				action: () => dispatch(setOpenModal('futures_smart_margin_onboard')),
@@ -120,7 +116,7 @@ const ManagePosition: React.FC = () => {
 			}
 		}
 		return undefined
-	}, [isWalletConnected, smartMarginAccount, isDepositRequired, dispatch, openConnectModal])
+	}, [smartMarginAccount, isDepositRequired, dispatch])
 
 	const placeOrderDisabledReason = useMemo<{
 		message: string
@@ -232,17 +228,30 @@ const ManagePosition: React.FC = () => {
 		<>
 			<div>
 				<ManagePositionContainer>
-					<PlaceOrderButton
-						data-testid="trade-panel-submit-button"
-						noOutline
-						fullWidth
-						loading={previewStatus.status === FetchStatus.Loading}
-						variant={otherReason ? 'yellow' : leverageSide}
-						disabled={!otherReason && !!placeOrderDisabledReason}
-						onClick={otherReason?.action ?? onSubmit}
-					>
-						{t(otherReason?.key ?? placeOrderTranslationKey)}
-					</PlaceOrderButton>
+					{!isSignedIn ? (
+						<SignInButton>
+							<PlaceOrderButton
+								data-testid="trade-panel-submit-button"
+								variant="yellow"
+								noOutline
+								fullWidth
+							>
+								Sign In
+							</PlaceOrderButton>
+						</SignInButton>
+					) : (
+						<PlaceOrderButton
+							data-testid="trade-panel-submit-button"
+							noOutline
+							fullWidth
+							loading={previewStatus.status === FetchStatus.Loading}
+							variant={otherReason ? 'yellow' : leverageSide}
+							disabled={!otherReason && !!placeOrderDisabledReason}
+							onClick={otherReason?.action ?? onSubmit}
+						>
+							{t(otherReason?.key ?? placeOrderTranslationKey)}
+						</PlaceOrderButton>
+					)}
 				</ManagePositionContainer>
 			</div>
 

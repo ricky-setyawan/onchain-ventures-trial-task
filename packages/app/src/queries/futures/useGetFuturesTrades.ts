@@ -1,9 +1,10 @@
 import { NetworkId, FuturesTrade } from '@kwenta/sdk/types'
-import { getFuturesEndpoint, mapTrades, notNill, getFuturesTrades } from '@kwenta/sdk/utils'
-import { utils as ethersUtils } from 'ethers'
+import { mapTrades, notNill, FuturesTradeResult } from '@kwenta/sdk/utils'
+import { wei } from '@synthetixio/wei'
+import { getFuturesTrades } from 'api/futures'
 import { useInfiniteQuery, UseInfiniteQueryOptions } from 'react-query'
 
-import { DEFAULT_NUMBER_OF_TRADES, MAX_TIMESTAMP } from 'constants/defaults'
+import { MAX_TIMESTAMP } from 'constants/defaults'
 import QUERY_KEYS from 'constants/queryKeys'
 import Connector from 'containers/Connector'
 import logError from 'utils/logError'
@@ -13,49 +14,28 @@ const useGetFuturesTrades = (
 	options?: UseInfiniteQueryOptions<FuturesTrade[] | null> & { forceAccount: boolean }
 ) => {
 	const { network } = Connector.useContainer()
-	const futuresEndpoint = getFuturesEndpoint(network?.id as NetworkId)
 
 	return useInfiniteQuery<FuturesTrade[] | null>(
 		QUERY_KEYS.Futures.Trades(network?.id as NetworkId, currencyKey || null),
-		async ({ pageParam = { maxTs: Math.floor(Date.now() / 1000), minTs: 0 } }) => {
+		async () => {
 			if (!currencyKey) return null
 
 			try {
-				const response = await getFuturesTrades(
-					futuresEndpoint,
-					{
-						first: DEFAULT_NUMBER_OF_TRADES,
-						where: {
-							marketKey: `${ethersUtils.formatBytes32String(currencyKey as string)}`,
-							timestamp_gt: pageParam?.minTs ?? 0,
-							timestamp_lt: pageParam?.maxTs ?? Math.floor(Date.now() / 1000),
-						},
-						orderDirection: 'desc',
-						orderBy: 'timestamp',
-					},
-					{
-						id: true,
-						timestamp: true,
-						account: true,
-						abstractAccount: true,
-						accountType: true,
-						margin: true,
-						size: true,
-						asset: true,
-						marketKey: true,
-						price: true,
-						positionId: true,
-						positionSize: true,
-						positionClosed: true,
-						pnl: true,
-						feesPaid: true,
-						keeperFeesPaid: true,
-						orderType: true,
-						fundingAccrued: true,
-						trackingCode: true,
-					}
-				)
-				return response ? mapTrades(response) : null
+				const response = await getFuturesTrades()
+				if (Array.isArray(response) && response.length > 0) {
+					response.forEach((item) => {
+						item.timestamp = wei(item.timestamp)
+						item.margin = wei(item.margin)
+						item.size = wei((item.size / 10) ^ 18)
+						item.positionSize = wei(item.positionSize)
+						item.pnl = wei(item.pnl)
+						item.feesPaid = wei(item.feesPaid)
+						item.fundingAccrued = wei(item.fundingAccrued)
+						item.keeperFeesPaid = wei(item.keeperFeesPaid)
+					})
+				}
+
+				return response ? mapTrades(response as FuturesTradeResult[]) : null
 			} catch (e) {
 				logError(e)
 				return null

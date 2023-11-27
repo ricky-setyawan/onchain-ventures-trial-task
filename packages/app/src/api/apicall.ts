@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 export default async function apicall(
-	method: 'POST' | 'GET',
+	type: 'POST' | 'GET',
 	url: string,
 	data: any = undefined,
 	headers: any = undefined
@@ -10,15 +10,17 @@ export default async function apicall(
 	return new Promise((resolve, reject) => {
 		const baseurl = process.env.NEXT_PUBLIC_API_BASE_URL
 		if (!baseurl) reject('[APICALL] Invalid API_BASE_URL')
-		axios
-			.post(`${baseurl}/${url}`, data, {
-				headers: headers,
-			})
+		axios({
+			method: type,
+			url: `${baseurl}/${url}`,
+			data: data,
+			headers: headers,
+		})
 			.then((res) => {
-				resolve(res.data)
+				resolve(res.data.data)
 			})
 			.catch((err) => {
-				console.log(`[APICALL - Method:${method}, Url: ${url}, Body: ${data}`, err)
+				console.log(`[APICALL - Method:${type}, Url: ${url}, Body: ${data}`, err)
 				reject(err)
 			})
 	})

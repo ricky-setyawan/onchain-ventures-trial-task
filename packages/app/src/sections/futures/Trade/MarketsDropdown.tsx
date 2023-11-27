@@ -1,5 +1,5 @@
 import { ZERO_WEI } from '@kwenta/sdk/constants'
-import { FuturesMarket, FuturesMarketAsset } from '@kwenta/sdk/types'
+import { FuturesMarket, FuturesMarketAsset, FuturesMarketKey } from '@kwenta/sdk/types'
 import {
 	getDisplayAsset,
 	AssetDisplayByAsset,
@@ -9,6 +9,7 @@ import {
 	getMarketName,
 } from '@kwenta/sdk/utils'
 import { wei } from '@synthetixio/wei'
+import { getFuturesMarkets } from 'api/futures'
 import { useRouter } from 'next/router'
 import React, { useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -116,14 +117,60 @@ const MarketsDropdown: React.FC<MarketsDropdownProps> = ({ mobile }) => {
 	const selectedPastPrice = getPastPrice(marketAsset)
 
 	const options = useMemo(() => {
+		const initialData: FuturesMarket[] = [
+			{
+				marketKey: FuturesMarketKey.sETHPERP,
+				marketName: 'sETH',
+				asset: FuturesMarketAsset.sETH,
+				assetHex: '123',
+				currentFundingRate: wei(123),
+				currentFundingVelocity: wei(123),
+				feeRates: {
+					makerFee: wei(123),
+					takerFee: wei(123),
+					makerFeeDelayedOrder: wei(123),
+					takerFeeDelayedOrder: wei(123),
+					makerFeeOffchainDelayedOrder: wei(123),
+					takerFeeOffchainDelayedOrder: wei(123),
+				},
+				openInterest: {
+					shortPct: 123,
+					longPct: 123,
+					shortUSD: wei(123),
+					longUSD: wei(123),
+					long: wei(123),
+					short: wei(123),
+				},
+				marketDebt: wei(123),
+				marketSkew: wei(123),
+				marketSize: wei(123),
+				contractMaxLeverage: wei(123),
+				appMaxLeverage: wei(123),
+				settings: {
+					maxMarketValue: wei(123),
+					skewScale: wei(123),
+					delayedOrderConfirmWindow: 123,
+					offchainDelayedOrderMinAge: 123,
+					offchainDelayedOrderMaxAge: 123,
+					minDelayTimeDelta: 123,
+					maxDelayTimeDelta: 123,
+				},
+				isSuspended: false,
+				marketClosureReason: 'system-upgrade',
+				minInitialMargin: wei(123),
+				keeperDeposit: wei(123),
+				marketLimitUsd: wei(123),
+				marketLimitNative: wei(123),
+			},
+		]
 		const lowerSearch = search?.toLowerCase()
 		const markets = lowerSearch
-			? (futuresMarkets as FuturesMarket[]).filter(
+			? initialData.filter(
 					(m) =>
 						m.asset.toLowerCase().includes(lowerSearch) ||
 						AssetDisplayByAsset[m.asset]?.toLocaleLowerCase().includes(lowerSearch)
 			  )
-			: futuresMarkets
+			: initialData
 
 		const sortedMarkets = markets
 			.filter((m) => favMarkets.includes(m.asset))
@@ -162,7 +209,7 @@ const MarketsDropdown: React.FC<MarketsDropdownProps> = ({ mobile }) => {
 				key: market.marketKey,
 				description: getSynthDescription(market.asset, t),
 				priceNum: basePriceRate?.price.toNumber() ?? 0,
-				price: formatDollars(basePriceRate?.price ?? '0', {
+				price: formatDollars(basePriceRate?.price ?? '12', {
 					suggestDecimalsForAsset: market.asset,
 				}),
 				change: change.toNumber(),
